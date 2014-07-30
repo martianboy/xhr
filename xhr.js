@@ -24,6 +24,12 @@ function xhr(options) {
 					case 'text/plain':
 						return response;
 						break;
+					case 'xml':
+					case 'application/xml':
+						if (req.responseXML.documentElement.nodeName === "parsererror")
+							throw new Error('XML Parsing error.');
+						else
+							return req.responseXML;
 					case 'application/json':
 					case 'json':
 					default:
@@ -61,7 +67,7 @@ function xhr(options) {
 					if (typeof(data) === 'object')
 						data = convertData(data);
 					break;
-				case 'appliation/json':
+				case 'application/json':
 					data = JSON.stringify(data);
 			}
 
@@ -121,4 +127,3 @@ xhr.uploadFile = function(url, file, method, progressCallback) {
 };
 
 module.exports = xhr;
-
