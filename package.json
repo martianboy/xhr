@@ -1,0 +1,23 @@
+{
+  "name": "promisified-xhr",
+  "version": "0.1.5",
+  "description": "A simple XHR library with jQuery-like syntax that returns native Promise object.",
+  "main": "xhr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martianboy/xhr.git"
+  },
+  "keywords": [
+    "xhr2",
+    "html5"
+  ],
+  "author": "Abbas Mashayekh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martianboy/xhr/issues"
+  },
+  "homepage": "https://github.com/martianboy/xhr"
+}
