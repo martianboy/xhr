@@ -1,5 +1,6 @@
-define(['underscore'], function(_) {
 "use strict";
+
+var _ = require('underscore');
 
 function convertData(obj) {
 	return Object.keys(obj).map(function(key) {
@@ -53,7 +54,7 @@ function xhr(options) {
 		req.open(method, options.url);
 
 		var data = options.data;
-		
+
 		if ('contentType' in options && method !== 'GET') {
 			switch(options.contentType) {
 				case 'application/x-www-form-urlencoded':
@@ -119,6 +120,5 @@ xhr.uploadFile = function(url, file, method, progressCallback) {
 	});
 };
 
-return xhr;
+module.exports = xhr;
 
-})
