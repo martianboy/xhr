@@ -1,6 +1,6 @@
 {
   "name": "promisified-xhr",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A simple XHR library with jQuery-like syntax that returns native Promise object.",
   "main": "xhr.js",
   "scripts": {
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/martianboy/xhr/issues"
   },
-  "homepage": "https://github.com/martianboy/xhr"
+  "homepage": "https://github.com/martianboy/xhr",
+  "dependencies": {
+    "underscore": "^1.6.0"
+  }
 }
