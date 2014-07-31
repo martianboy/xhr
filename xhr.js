@@ -1,6 +1,15 @@
 "use strict";
 
-var _ = require('underscore');
+function _extend(obj) {
+	Array.prototype.slice.call(arguments, 1).forEach(function(source) {
+		if (source) {
+			for (var prop in source) {
+				obj[prop] = source[prop];
+			}
+		}
+	});
+	return obj;
+}
 
 function convertData(obj) {
 	return Object.keys(obj).map(function(key) {
@@ -78,7 +87,7 @@ function xhr(options) {
 			req.responseType = options.dataType;
 
 		if ('xhrFields' in options)
-			_.extend(req, options.xhrFields);
+			_extend(req, options.xhrFields);
 
 		if (options.data instanceof FormData) {
 			// req.upload.addEventListener('load', onLoad);
